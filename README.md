@@ -62,3 +62,31 @@ Create `EXPLANATION.md` (max 250 words) containing:
 ## Submission
 
 - Submit a public GitHub repository URL containing your solution to the Google form link provided.
+
+
+## Run tests locally
+to run test locally follow these steps:
+1. Create a virtual environment:
+
+python -m venv venv
+2. Activate it:
+
+For windows:
+venv\Scripts\activate
+
+Linux / Mac:
+source venv/bin/activate
+
+3. Install dependencies:
+pip install -r requirements.txt
+
+4. Run the test suite:
+pytest -v
+
+## Run tests with Docker
+
+Build the Docker image:
+docker build -t ai-experts-assignment .
+
+run the tests:
+docker run --rm ai-experts-assignment
