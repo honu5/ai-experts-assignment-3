@@ -43,3 +43,13 @@ def test_api_request_refreshes_when_token_is_dict():
     resp = c.request("GET", "/me", api=True)
 
     assert resp["headers"].get("Authorization") == "Bearer fresh-token"
+
+    
+#An additional test to cover the case where the token is of an invalid type(for more coverage)
+def test_api_request_refreshes_when_token_is_invalid_type():
+    c = Client()
+    c.oauth2_token = "invalid-token-type"
+
+    resp = c.request("GET", "/me", api=True)
+
+    assert resp["headers"].get("Authorization") == "Bearer fresh-token"

@@ -63,6 +63,7 @@ Create `EXPLANATION.md` (max 250 words) containing:
 
 - Submit a public GitHub repository URL containing your solution to the Google form link provided.
 
+## Running the Project
 
 ## Run tests locally
 to run test locally follow these steps:
